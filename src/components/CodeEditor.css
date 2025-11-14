@@ -1,0 +1,205 @@
+.code-editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1e1e1e;
+  border: 1px solid #3e3e3e;
+}
+
+.code-editor-header {
+  background: #252526;
+  padding: 12px 16px;
+  border-bottom: 1px solid #3e3e3e;
+  display: flex;
+  align-items: center;
+}
+
+.code-editor-title {
+  color: #cccccc;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.code-editor-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.line-numbers {
+  background: #252526;
+  color: #858585;
+  padding: 16px 8px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  user-select: none;
+  min-width: 40px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.line-numbers span {
+  display: block;
+}
+
+.editor-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-scrollable {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+
+.editor-scrollable::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.editor-scrollable::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.editor-scrollable::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 6px;
+}
+
+.editor-scrollable::-webkit-scrollbar-thumb:hover {
+  background: #4e4e4e;
+}
+
+.code-editor {
+  flex: 1;
+  min-height: 100%;
+  position: relative;
+}
+
+.editor-content .code-editor-pre,
+.editor-content .code-editor-textarea {
+  margin: 0 !important;
+  padding: 16px !important;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  white-space: pre !important;
+  overflow-wrap: normal !important;
+  tab-size: 2 !important;
+  -moz-tab-size: 2 !important;
+}
+
+.code-editor-textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent !important;
+  color: transparent !important;
+  caret-color: #d4d4d4 !important;
+  border: none !important;
+  outline: none !important;
+  resize: none !important;
+  padding: 16px !important;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  white-space: pre !important;
+  overflow-wrap: normal !important;
+  tab-size: 2 !important;
+  -moz-tab-size: 2 !important;
+}
+
+.code-editor-textarea::placeholder {
+  color: #6a6a6a !important;
+}
+
+.code-editor-pre {
+  position: relative;
+  margin: 0 !important;
+  padding: 16px !important;
+  background: #1e1e1e !important;
+  pointer-events: none;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  white-space: pre !important;
+  overflow-wrap: normal !important;
+  tab-size: 2 !important;
+  -moz-tab-size: 2 !important;
+}
+
+
+/* Prism.js theme overrides for better visibility */
+.editor-content pre[class*="language-"] {
+  background: #1e1e1e !important;
+  margin: 0 !important;
+}
+
+.editor-content .token.comment,
+.editor-content .token.prolog,
+.editor-content .token.doctype,
+.editor-content .token.cdata {
+  color: #6a9955 !important;
+}
+
+.editor-content .token.punctuation {
+  color: #d4d4d4 !important;
+}
+
+.editor-content .token.property,
+.editor-content .token.tag,
+.editor-content .token.boolean,
+.editor-content .token.number,
+.editor-content .token.constant,
+.editor-content .token.symbol,
+.editor-content .token.deleted {
+  color: #569cd6 !important;
+}
+
+.editor-content .token.selector,
+.editor-content .token.attr-name,
+.editor-content .token.string,
+.editor-content .token.char,
+.editor-content .token.builtin,
+.editor-content .token.inserted {
+  color: #ce9178 !important;
+}
+
+.editor-content .token.operator,
+.editor-content .token.entity,
+.editor-content .token.url,
+.editor-content .language-css .token.string,
+.editor-content .style .token.string {
+  color: #d4d4d4 !important;
+}
+
+.editor-content .token.atrule,
+.editor-content .token.attr-value,
+.editor-content .token.keyword {
+  color: #c586c0 !important;
+}
+
+.editor-content .token.function,
+.editor-content .token.class-name {
+  color: #dcdcaa !important;
+}
+
+.editor-content .token.regex,
+.editor-content .token.important,
+.editor-content .token.variable {
+  color: #d16969 !important;
+}
