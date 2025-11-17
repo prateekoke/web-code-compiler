@@ -41,7 +41,7 @@ p {
   javascript: `document.addEventListener('DOMContentLoaded', () => {
   const output = document.getElementById('output');
   if (output) {
-    output.innerHTML = '<p style="color: #ffd700; font-weight: bold;">JavaScript is working! 🚀</p>';
+    output.innerHTML = '<p style="color: #ffd700; font-weight: bold;">JavaScript is working!</p>';
   }
   
   console.log('Hello from the code compiler!');
